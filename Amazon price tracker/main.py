@@ -26,12 +26,12 @@ def send_email():
     server.starttls()
     server.ehlo()
 
-    server.login("gottumukkala.vaishnavi20@gmail.com","flluadhcevliqzju")
+    server.login(" mail "," password ")# enter your mail id and password
     subject = "AMAZON PRICE ALERT"
     body = "Hey the price fell Down.Do you wann buy? .Go order now before the deal gets over\n Link:'https://www.amazon.in/dp/B09V48BYGP?th=1"
     msg = f'Subject:{subject}\n\n\n{body}'
 
-    server.sendmail("gottumukkala.vaishnavi20@gmail.com","gottumukkala.vaishnavi20@gmail.com",msg)
+    server.sendmail(" from mail "," to ",msg)
     print("email sent")
     server.quit()
 price=check_phone_price()
